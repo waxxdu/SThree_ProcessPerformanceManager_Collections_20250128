@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carsten Wittmann - Process & Performance Manager Banking Collections | SThree</title>
+    <meta name="description" content="32+ Jahre Banking-Expertise | Six Sigma Master Black Belt | Prozessoptimierung für Inkasso & Collections">
+    <meta property="og:title" content="Carsten Wittmann - Process & Performance Manager Banking Collections">
+    <meta property="og:description" content="Bewerbung für Process & Performance Manager Banking Collections">
+    <meta property="og:type" content="profile">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #A64D4D;
+            --primary-dark: #8B3E3E;
+            --secondary: #2C3E50;
+            --accent: #E8B86D;
+            --text: #333333;
+            --text-light: #666666;
+            --text-muted: #999999;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --bg-dark: #1a1a2e;
+            --border: #E0E0E0;
+            --success: #28a745;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-elevated: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+            --transition-fast: 150ms ease;
+            --transition-base: 300ms ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg-primary);
+        }
+
+        .header-contact {
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+        }
+
+        .header-contact .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-fast);
+        }
+
+        .header-contact a:hover { color: var(--accent); }
+
+        .main-nav {
+            position: fixed;
+            top: 36px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition-base);
+        }
+
+        .main-nav.scrolled { box-shadow: 0 2px 20px var(--shadow); }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--secondary);
+            margin: 5px 0;
+            transition: var(--transition-fast);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .project-badge {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.875rem;
+            z-index: 10;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--bg-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 1.5rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-tagline {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-elevated); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: var(--secondary); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; }
+        section:nth-child(even) { background: var(--bg-secondary); }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: var(--radius-full);
+        }
+
+        .section-intro {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 3rem;
+        }
+
+        .profile-text p {
+            margin-bottom: 1rem;
+            font-size: 1.0625rem;
+            line-height: 1.8;
+        }
+
+        .profile-photo {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .match-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .match-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-base);
+            border-left: 4px solid var(--success);
+        }
+
+        .match-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
+
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .match-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            flex: 1;
+        }
+
+        .match-badge {
+            background: #d4edda;
+            color: #155724;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .match-headline {
+            color: var(--text);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .match-evidence { list-style: none; }
+
+        .match-evidence li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+        }
+
+        .match-evidence li:first-child { border-top: none; }
+
+        .evidence-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--primary);
+        }
+
+        #mid-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem;
+        }
+
+        #mid-cta h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        #mid-cta p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.125rem; }
+        #mid-cta .btn-secondary { border-color: white; color: white; }
+        #mid-cta .btn-secondary:hover { background: white; color: var(--primary); }
+
+        .timeline { position: relative; padding-left: 2rem; }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-entry {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-entry:last-child { padding-bottom: 0; }
+
+        .timeline-marker {
+            position: absolute;
+            left: -2rem;
+            top: 0.25rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg-primary);
+            transform: translateX(-50%);
+            margin-left: 7px;
+        }
+
+        .timeline-entry[data-type="education"] .timeline-marker { background: var(--secondary); }
+        .timeline-entry[data-type="certification"] .timeline-marker { background: var(--accent); }
+        .timeline-entry.current .timeline-marker { box-shadow: 0 0 0 4px rgba(166, 77, 77, 0.2); }
+
+        .timeline-content {
+            background: white;
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+        }
+
+        .timeline-entry.current .timeline-content { border-left: 3px solid var(--primary); }
+        .timeline-period { font-size: 0.8125rem; color: var(--text-muted); font-weight: 500; }
+        .timeline-title { font-size: 1.0625rem; font-weight: 600; color: var(--secondary); margin: 0.25rem 0; }
+        .timeline-org { color: var(--text-light); font-size: 0.9375rem; margin-bottom: 0.5rem; }
+        .timeline-highlights { font-size: 0.875rem; color: var(--text-light); padding-left: 1rem; margin: 0; }
+        .timeline-highlights li { margin-bottom: 0.25rem; }
+        .timeline-group-title { font-size: 1.25rem; font-weight: 600; color: var(--secondary); margin: 2rem 0 1rem; padding-left: 2rem; }
+        .timeline-group-title:first-child { margin-top: 0; }
+
+        .working-style-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .style-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+        }
+
+        .style-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--primary);
+        }
+
+        .style-card h3 { font-size: 1rem; color: var(--secondary); margin-bottom: 0.5rem; }
+        .style-card p { font-size: 0.875rem; color: var(--text-light); }
+
+        .languages-bar { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .language-item { display: flex; align-items: center; gap: 0.5rem; }
+        .language-flag { font-size: 1.5rem; }
+        .language-info strong { display: block; font-size: 0.9375rem; }
+        .language-info span { font-size: 0.8125rem; color: var(--text-light); }
+
+        #contact { background: var(--secondary); color: white; }
+        #contact .section-title { color: white; }
+        #contact .section-title::after { background: var(--accent); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .contact-item a { color: white; text-decoration: none; transition: var(--transition-fast); }
+        .contact-item a:hover { color: var(--accent); }
+        .contact-item strong { display: block; font-size: 0.875rem; opacity: 0.7; margin-bottom: 0.25rem; font-weight: 500; }
+
+        .contact-cta {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+        }
+
+        .contact-cta p { font-size: 1.125rem; margin-bottom: 1.5rem; opacity: 0.9; }
+
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .gap-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+            border-left: 4px solid var(--accent);
+        }
+
+        .gap-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .gap-icon { font-size: 1.5rem; }
+        .gap-header h3 { font-size: 1rem; color: var(--secondary); }
+        .gap-approach { background: var(--bg-secondary); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.75rem; color: var(--text-light); font-weight: 500; }
+        .gap-content p { font-size: 0.9375rem; color: var(--text-light); margin-bottom: 1rem; }
+        .gap-transferable { font-size: 0.875rem; }
+        .gap-transferable strong { color: var(--secondary); }
+
+        @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        @media (max-width: 768px) {
+            .header-contact .container { justify-content: center; gap: 1rem; font-size: 0.75rem; }
+            .main-nav { top: 32px; }
+            .nav-toggle { display: block; }
+            .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; gap: 0; box-shadow: var(--shadow-card); display: none; }
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+            .nav-links li:last-child { border-bottom: none; }
+            .hero-name { font-size: 2.5rem; }
+            .hero-title { font-size: 1.25rem; }
+            .profile-content { grid-template-columns: 1fr; }
+            .profile-image { order: -1; max-width: 250px; margin: 0 auto; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .match-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .project-badge { font-size: 0.75rem; padding: 0.375rem 1rem; }
+            section { padding: 3rem 0; }
+        }
+
+        @media print {
+            .main-nav, .header-contact, .hero-cta, #mid-cta { display: none; }
+            #hero { min-height: auto; padding: 2rem; }
+            section { padding: 1.5rem 0; break-inside: avoid; }
+            .match-card, .stat-card, .timeline-content { box-shadow: none; border: 1px solid var(--border); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-contact">
+        <div class="container">
+            <a href="mailto:cw@waxxdu.de">📧 cw@waxxdu.de</a>
+            <a href="tel:+4915122628639">📱 +49 151 2262 8639</a>
+            <a href="https://www.linkedin.com/in/carsten-wittmann/" target="_blank">🔗 LinkedIn</a>
+            <span>📍 Frankfurt am Main</span>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">CW</a>
+            <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="#profile">Profil</a></li>
+                <li><a href="#match">Qualifikationen</a></li>
+                <li><a href="#timeline">Werdegang</a></li>
+                <li><a href="#working-style">Arbeitsstil</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="project-badge">📊 Bewerbung: Process & Performance Manager Banking Collections</div>
+        <div class="hero-content">
+            <h1 class="hero-name">Carsten Wittmann</h1>
+            <p class="hero-title">Process & Performance Manager Banking Collections</p>
+            <p class="hero-tagline">32+ Jahre Banking & Finanzdienstleistung | Six Sigma Master Black Belt<br>3,6 Mio. EUR interner Mehrwert durch Prozessoptimierung | 200+ Manager trainiert</p>
+            <div class="hero-cta">
+                <a href="#match" class="btn btn-primary">Warum ich passe →</a>
+                <a href="mailto:cw@waxxdu.de?subject=Process%20%26%20Performance%20Manager%20Banking%20Collections" class="btn btn-secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile">
+        <div class="container">
+            <h2 class="section-title">Profil</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>Erfahrener Experte für Prozessexzellenz und Performance Management mit über 32 Jahren Erfahrung im Banking- und Finanzdienstleistungssektor. Als zertifizierter Six Sigma Master Black Belt habe ich nachweislich Prozessoptimierungen in komplexen Bankenumgebungen umgesetzt und dabei einen internen Mehrwert von 3,6 Mio. EUR generiert.</p>
+                    <p>Meine Stärke liegt in der Verbindung von analytischer Tiefe mit praktischer Umsetzungskompetenz. Ich analysiere nicht nur Prozesse, sondern setze Optimierungen hands-on um – von der Konzeption über die Pilotierung bis zum vollständigen Rollout.</p>
+                    <p>Teams schätzen meine konstruktive Art und meine Fähigkeit, auch in kritischen Situationen ruhig und lösungsorientiert zu bleiben. Mit meiner Coaching- und Trainer-Erfahrung befähige ich Prozessverantwortliche und operative Teams, nachhaltige Verbesserungen eigenständig weiterzuführen.</p>
+                </div>
+                <div class="profile-image">
+                    <img src="https://waxxdu.de/wp-content/uploads/2026/01/carsten-wittmann-hero.png" alt="Carsten Wittmann" class="profile-photo">
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-value" data-count="32">0</span><span class="stat-label">Jahre Banking-Erfahrung</span></div>
+                <div class="stat-card"><span class="stat-value" data-count="32">0</span><span class="stat-label">Six Sigma Projekte geleitet</span></div>
+                <div class="stat-card"><span class="stat-value">3,6M</span><span class="stat-label">EUR interner Mehrwert</span></div>
+                <div class="stat-card"><span class="stat-value" data-count="200">0</span><span class="stat-label">Manager trainiert</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="match">
+        <div class="container">
+            <h2 class="section-title">Warum ich der perfekte Match bin</h2>
+            <p class="section-intro">Ich erfülle alle wesentlichen Anforderungen für die Position Process & Performance Manager Banking Collections mit umfassender praktischer Erfahrung.</p>
+            <div class="match-grid">
+                <div class="match-card">
+                    <div class="match-header"><h3>6-7+ Jahre Erfahrung im Inkasso-/Bankenbereich</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Über 32 Jahre durchgehende Banking-Expertise</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>32+ Jahre im Banking & Finanzdienstleistungssektor</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>dwpbank, Xchanging/etb, WestLB, Sal. Oppenheim</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Wertpapierabwicklung, Kundenbetreuung, Transaction Banking</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Analyse & Optimierung von Bearbeitungsprozessen</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Six Sigma Master Black Belt mit nachweislichen Erfolgen</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>Zertifizierter Lean Six Sigma Master Black Belt (DMAIC)</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>32 Six Sigma Projekte mit 3,6 Mio. EUR Mehrwert bei dwpbank</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>Head of Process Excellence mit High-Performance-Team</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Erfahrung mit Forderungsportfolios & wirtschaftlicher Steuerung</h3><span class="match-badge">95% Match</span></div>
+                    <p class="match-headline">Key Account Management mit P&L-Verantwortung</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Key Account Manager Deutsche Bank, Sal. Oppenheim</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Business Case: 3 Mio. EUR Jahresumsatz bei 20% Kundeneinsparung</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>TCO-Berechnung und Finanzmodelle bei Großprojekten</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Prozessmanagement & Prozessautomatisierung</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Umfassende Expertise in Workflow-Optimierung</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>200+ Anwendungen und Prozesse analysiert (DSGVO)</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Business Modeling mit Camunda, ARIS, Visio</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>VBA/SQL-Entwicklung für Prozessautomatisierung</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Analytische Fähigkeiten & strukturiertes Vorgehen</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Datengetriebene Entscheidungsfindung</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>DMAIC-Methodik (Define, Measure, Analyze, Improve, Control)</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>Statistik-Software MINITAB & SigmaXL</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>KPI-Auswertungen und Management-Reporting</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Kommunikations- & Beratungskompetenz</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Stakeholder Management auf allen Ebenen</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>200+ Manager als Six Sigma Champion trainiert</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>NLP Master – Kommunikation und Coaching</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Beratung von Vorständen zu Lean Six Sigma & BPM</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Komplexe Prozesse verständlich aufbereiten</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Erfahrener Trainer und Dozent</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>Dozent für Qualitäts- und Change Management (HS Fresenius)</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>Info-Sessions für 700+ Mitarbeiter durchgeführt</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Dokumentation und Schulungsunterlagen entwickelt</li>
+                    </ul>
+                </div>
+                <div class="match-card">
+                    <div class="match-header"><h3>Praktische Umsetzungskompetenz</h3><span class="match-badge">100% Match</span></div>
+                    <p class="match-headline">Hands-on Implementierung, nicht nur Strategie</p>
+                    <ul class="match-evidence">
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Operative Leitung von Lean Six Sigma bei dwpbank</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>Migrationsplan für 80.000+ Geräte entwickelt und umgesetzt</li>
+                        <li><svg class="evidence-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Pilotteams zur erfolgreichen CI-Einführung geleitet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gaps">
+        <div class="container">
+            <h2 class="section-title">Nice-to-Have: Mein Ansatz</h2>
+            <p class="section-intro">Transparenz ist mir wichtig. Bei Process Mining Tools wie Celonis habe ich keine direkte Erfahrung, bringe aber verwandte Kompetenzen mit.</p>
+            <div class="match-grid">
+                <div class="gap-card">
+                    <div class="gap-header"><span class="gap-icon">🎯</span><h3>Process Mining Tools (z.B. Celonis) / Power BI</h3><span class="gap-approach">Transferierbar</span></div>
+                    <div class="gap-content">
+                        <p>Keine direkte Celonis-Erfahrung, aber fundierte Kenntnisse in statistischen Analysemethoden und Prozessvisualisierung. Schnelle Einarbeitung durch starke analytische Basis und Erfahrung mit vergleichbaren Tools.</p>
+                        <div class="gap-transferable"><strong>Transferierbar:</strong> MINITAB, SigmaXL (statistische Analyse), Camunda/ARIS (Prozessmodellierung), MS Access/SQL (Datenanalyse), VBA-Entwicklung für Reporting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mid-cta">
+        <h2>Überzeugt?</h2>
+        <p>Lassen Sie uns über die Anforderungen für Process & Performance Manager Banking Collections sprechen.</p>
+        <div class="hero-cta">
+            <a href="mailto:cw@waxxdu.de?subject=Process%20%26%20Performance%20Manager%20Banking%20Collections" class="btn btn-primary">Gespräch vereinbaren</a>
+            <a href="#timeline" class="btn btn-secondary">Vollständigen Werdegang ansehen ↓</a>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <div class="container">
+            <h2 class="section-title">Beruflicher Werdegang</h2>
+            <h3 class="timeline-group-title">Aktuelle Tätigkeiten</h3>
+            <div class="timeline">
+                <div class="timeline-entry current" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">2024 – heute</span><h4 class="timeline-title">Expert für AI Compliance und Data Privacy</h4><p class="timeline-org">Koerting Institut · Bad Homburg</p><ul class="timeline-highlights"><li>Schulungen zu Data Governance, Compliance und Datenschutz</li><li>AI Compliance für TÜV-Zertifizierungskurse</li></ul></div></div>
+                <div class="timeline-entry current" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">10/2012 – heute</span><h4 class="timeline-title">Freelancer: Consultant, Trainer, Coach</h4><p class="timeline-org">waXXdu! Carsten Wittmann · Frankfurt</p><ul class="timeline-highlights"><li>DSGVO-Compliance, Data Governance, Prozessoptimierung</li><li>Lean Six Sigma Training und Coaching</li></ul></div></div>
+            </div>
+            <h3 class="timeline-group-title">Ausgewählte Projekthistorie</h3>
+            <div class="timeline">
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">01/2025 – 10/2025</span><h4 class="timeline-title">Data Governance Projektunterstützung</h4><p class="timeline-org">Banking-Projekt</p><ul class="timeline-highlights"><li>Konzeption und Datenvorbereitung für Data Dictionary</li><li>Datenanonymisierung: Anforderungsanalyse und Testing</li></ul></div></div>
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">11/2022 – 12/2024</span><h4 class="timeline-title">Data Governance für Risk Management Application</h4><p class="timeline-org">Großbank</p><ul class="timeline-highlights"><li>Leitung Teilprojekt Data Governance und Datenschutz</li><li>Anforderungsdefinition für 2nd Line of Defense</li></ul></div></div>
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">04/2020 – 02/2022</span><h4 class="timeline-title">Global Virtual Desktop Rollout</h4><p class="timeline-org">Tier-1 Bank</p><ul class="timeline-highlights"><li>Leitung Service Transition Workstream</li><li>Migrationsplan für 80.000+ Geräte</li></ul></div></div>
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">2018 – 09/2019</span><h4 class="timeline-title">DSGVO-Readiness</h4><p class="timeline-org">Deutsche Transaktionsbank</p><ul class="timeline-highlights"><li>135 Anwendungen + 260 Makro-Lösungen analysiert</li><li>Löschkonzepte für kritische Anwendungen entwickelt</li></ul></div></div>
+            </div>
+            <h3 class="timeline-group-title">Festanstellungen</h3>
+            <div class="timeline">
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">2009 – 2012</span><h4 class="timeline-title">Head of Process Excellence / Expert BPM</h4><p class="timeline-org">Deutsche WertpapierService Bank AG · Frankfurt</p><ul class="timeline-highlights"><li>3,6 Mio. EUR interner Mehrwert aus 32 Projekten</li><li>High-Performance-Team von Six Sigma Black Belts aufgebaut</li></ul></div></div>
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">1999 – 2007</span><h4 class="timeline-title">Master Black Belt / Black Belt / Key Account Manager</h4><p class="timeline-org">Xchanging / etb european transaction bank GmbH · Frankfurt</p><ul class="timeline-highlights"><li>Business Case: 3 Mio. EUR Jahresumsatz, ROI 1 Jahr</li><li>Key Account Deutsche Bank PBC & PWM</li></ul></div></div>
+                <div class="timeline-entry" data-type="experience"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">1994 – 1999</span><h4 class="timeline-title">Wertpapierabwicklung (mit Prokura)</h4><p class="timeline-org">Sal. Oppenheim jr. & Cie. KGaA · Köln</p><ul class="timeline-highlights"><li>Verantwortlich für tägliche Operations</li><li>Experte im Outsourcing-Projekt</li></ul></div></div>
+            </div>
+            <h3 class="timeline-group-title">Zertifizierungen & Ausbildung</h3>
+            <div class="timeline">
+                <div class="timeline-entry" data-type="certification"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">2024</span><h4 class="timeline-title">TÜV-Rheinland Certified AI Consultant</h4><p class="timeline-org">TÜV Rheinland</p></div></div>
+                <div class="timeline-entry" data-type="certification"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">2019</span><h4 class="timeline-title">Zertifizierter Datenschutzbeauftragter</h4><p class="timeline-org">LUTOP Datenschutz Akademie GmbH</p></div></div>
+                <div class="timeline-entry" data-type="certification"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">Zertifiziert</span><h4 class="timeline-title">Six Sigma Master Black Belt</h4><p class="timeline-org">Lean Six Sigma (DMAIC)</p></div></div>
+                <div class="timeline-entry" data-type="education"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">1991 – 1993</span><h4 class="timeline-title">Studium Betriebswirtschaftslehre</h4><p class="timeline-org">Universität Marburg</p></div></div>
+                <div class="timeline-entry" data-type="education"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-period">1989 – 1991</span><h4 class="timeline-title">Bankkaufmann</h4><p class="timeline-org">WestLB Düsseldorf</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="working-style">
+        <div class="container">
+            <h2 class="section-title">Arbeitsstil & Persönlichkeit</h2>
+            <div class="working-style-grid">
+                <div class="style-card"><div class="style-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3>Ruhig & Besonnen</h3><p>Bleibe auch in kritischen Situationen konstruktiv und lösungsorientiert</p></div>
+                <div class="style-card"><div class="style-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h3>Teamorientiert</h3><p>Kollaborativer Arbeitsstil, entwickle Win-Win-Szenarien</p></div>
+                <div class="style-card"><div class="style-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><h3>Analytisch & Ganzheitlich</h3><p>Schnelle Auffassungsgabe, entwickle holistische Perspektiven</p></div>
+                <div class="style-card"><div class="style-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><h3>Umsetzungsstark</h3><p>Transformiere Konzepte in realisierte Lösungen – hands-on</p></div>
+            </div>
+            <div class="languages-bar">
+                <div class="language-item"><span class="language-flag">🇩🇪</span><div class="language-info"><strong>Deutsch</strong><span>Muttersprache</span></div></div>
+                <div class="language-item"><span class="language-flag">🇬🇧</span><div class="language-info"><strong>Englisch</strong><span>Fließend</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Lassen Sie uns sprechen</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:cw@waxxdu.de">cw@waxxdu.de</a></div></div>
+                    <div class="contact-item"><span class="contact-icon">📱</span><div><strong>Telefon</strong><a href="tel:+4915122628639">+49 151 2262 8639</a></div></div>
+                    <div class="contact-item"><span class="contact-icon">🔗</span><div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/carsten-wittmann/" target="_blank">linkedin.com/in/carsten-wittmann</a></div></div>
+                    <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Standort</strong>Frankfurt am Main (80% Remote möglich)</div></div>
+                    <div class="contact-item"><span class="contact-icon">✅</span><div><strong>Verfügbarkeit</strong>Ab Februar 2026</div></div>
+                </div>
+                <div class="contact-cta">
+                    <p>Bereit für die Herausforderung als Process & Performance Manager Banking Collections!</p>
+                    <a href="mailto:cw@waxxdu.de?subject=Process%20%26%20Performance%20Manager%20Banking%20Collections%20-%20Bewerbung" class="btn btn-primary">Jetzt Kontakt aufnehmen →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>© 2025 Carsten Wittmann. CV-Präsentation für Process & Performance Manager Banking Collections bei SThree.</p></footer>
+
+    <script>
+        const nav = document.querySelector('.main-nav');
+        window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+        const menuToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); navLinks.classList.remove('active'); }
+            });
+        });
+        const animateValue = (el, end) => {
+            let current = 0;
+            const increment = end / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                el.textContent = Math.floor(current);
+                if (current >= end) { el.textContent = end + '+'; clearInterval(timer); }
+            }, 20);
+        };
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const count = parseInt(el.dataset.count);
+                    if (count) { animateValue(el, count); }
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-count]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
